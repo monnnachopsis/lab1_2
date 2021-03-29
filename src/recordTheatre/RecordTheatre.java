@@ -43,12 +43,12 @@ public class RecordTheatre {
 
         for (int i = 0; i < theatres.length-1; i++)
             for (int j = 0; j < theatres.length-i-1; j++)
-                if(theatres [j].name.compareTo(theatres[i+1].name)>0){
+                if(theatres [j].name.compareTo(theatres[i+1].name)<0){
                     Theatre rab=theatres[j];
                     theatres[j]=theatres[j+1];
                     theatres[j+1]=rab;
                 }
-        System.out.println("\nОтсортированный список по названиям:");
+        System.out.println("\nОтсортированный список по названиям наоборот:");
         for (Theatre str : theatres)
             System.out.println(" "+str.name+ "\t" +str.ceo +"\t"+ str.address+"\t"+str.rating);
 
